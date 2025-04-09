@@ -1,5 +1,5 @@
 p {
-    color: blue;
+    color: darkblue;
 }
 body { background-color: lightgray;
 }
@@ -68,6 +68,9 @@ input[type="submit"]:hover {
         left: 100px;
     }
 }
+.pseudo-list li:nth-child(odd) {
+    background-color: lightgray;
+}
 .pseudo-list li:nth-child(even) {
     background-color: white;
 }
@@ -77,4 +80,24 @@ input[type="submit"]:hover {
 }
 .filter-image:hover {
     filter: grayscale(0%);
+}
+.quote {
+    position: relative;
+    padding-left: 20px;
+    font-style: italic;
+    font-size: 25px;
+}
+.quote::before {
+    content: '"';
+    font-size: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: rgb(80, 169, 108);
+}
+.quote::after {
+    content: '"';
+    font-size: 40px;
+    position: absolute;
+    color: rgb(80, 169, 108);
 }

@@ -1,24 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
 
 body {
-    background-color: #1a1a1a; /* Dark background for the mystic theme */
-    color: #ffcc00;/* Light text for contrast */
-   font-family: 'Cinzel', serif; /* Gothic-style font */
-    margin: 0p;
+    background-color: #1a1a1a;
+    color: #e5e5e5;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    font-family: 'Cinzel', serif;
+    font-size: larger;
+    margin: 0;
     padding: 0;
-    min-height: 100vh; /* Full height of the viewport */
     display: flex;
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column; 
+    min-height: 100vh;
+
+    flex-direction: column;
     justify-content: space-between;
 }
+
+h3 {
+    color:#e60000;
+}
 .container {
-    padding-left: 20px;  /* Adds space to the left of the content inside .container */
+    padding-left: 20px;
 }
 
 header {
-    background-color: #2e0000; /* Dark red background for the header */
+    background-color: #2e0000;
     padding: 20px 0;
-    border-bottom: 2px solid #5a0000; /* Slightly lighter border for effect */
+    border-bottom: 2px solid #5a0000;
 }
 
 .navbar {
@@ -28,16 +36,17 @@ header {
 }
 
 .navbar-brand {
-    color: #ff3333; /* Bloody red color for the brand */
-    font-family: 'Cinzel', serif; /* Gothic font for the brand */
-    font-size: 36px; /* Larger font size for the brand */
+    color: #ffcc00;
+    font-family: 'Cinzel', serif;
+    font-size: 40px;
     text-transform: uppercase;
-    letter-spacing: 2px; /* Add letter spacing for a bolder look */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Adding shadow for a mystic effect */
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .navbar-nav .nav-link {
-    color: #e60000; /* Blood-red for the nav links */
+    color: #e60000;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     text-transform: uppercase;
     padding: 12px 20px;
     font-size: 18px;
@@ -46,44 +55,48 @@ header {
 }
 
 .navbar-nav .nav-link:hover {
-    background-color: #400000; /* Darker hover effect for mystic feel */
-    color: #ffffff;
-    border-radius: 5px; /* Rounded corners for a more polished look */
-    box-shadow: 0px 0px 10px rgba(255, 51, 51, 0.6);
+    background-color: #400000;
+    color: #fecd0c;
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px rgba(255, 51, 51, 0.6), 0 0 20px;
+    padding: 12px 25px;
 }
 .navbar-nav .nav-item.active .nav-link {
-    color: #e60000; /* Darker red for active link */
-    font-weight: bold; /* Make the active link bold */
- text-shadow: none;
-    box-shadow: 0 0 10px rgba(255, 51, 51, 0.8), 0 0 20px rgba(255, 51, 51, 0.6); /* Glow around the link */
-    border-radius: 25px; /* Rounded corners for the active link */
-    padding: 12px 25px; /* Add some extra padding */
+    color: #ffcc00;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(255, 51, 51, 0.8), 0 0 20px rgba(255, 51, 51, 0.6);
+    border-radius: 25px;
+    padding: 12px 25px;
 }
 
 .navbar-toggler {
-    border-color: #e60000; /* Red border for toggler */
+    border-color: #fecd0c;
 }
 
 .navbar-toggler-icon {
-    background-color: #e60000; /* Red icon for toggler */
+     background-color: #9e0202;
 }
 .navbar-nav .nav-item {
-    margin-right: 20px; /* Increase space between nav items */
+    margin-right: 20px;
 }
 
 .navbar-nav .nav-item:last-child {
-    margin-right: 0; /* Remove margin from the last nav item */
+    margin-right: 0;
+}
+
+.navbar-toggler-icon {
+        width: 60px; /* Increase the size of the icon */
+        height: 60px;
 }
 
 main {
-    flex: 1; /* Ensures that the main content grows to take up the available space */
+    flex: 1;
     padding: 20px;
 }
 
-/* Footer Styling */
 footer {
     background-color: #2e0000;
-    color: #f5f5f5;
+    color: #e5e5e5;
     padding: 20px;
     text-align: center;
     font-size: 14px;
@@ -102,7 +115,7 @@ footer {
   font-size: 12px;
 }
 
-/* Responsive Styles */
+
 @media (max-width: 768px) {
     .navbar-nav {
         text-align: center;
@@ -112,97 +125,91 @@ footer {
         font-size: 16px;
     }
     .navbar-brand {
-        font-size: 30px; /* Adjust brand size for smaller screens */
+        font-size: 30px;
     }
 }
 
-
-/* Karusellin kuvien koko */
 #carouselExampleCaptions {
-  width: 70%;  /* Adjust width to fit the container */
-  max-width: 1000px; /* Maximum width (you can adjust this) */
-  margin: 50px auto; /* Center the carousel and give some spacing at top and bottom */
-  position: relative;  /* Ensures the carousel stays within its bounds */
-  overflow: hidden;  /* Hide any overflow of images */
+  width: 70%;
+  max-width: 1000px;
+  margin: 50px auto;
+  position: relative;
+  overflow: hidden;
   display: block;
 }
 
-/* Ensure images do not get cropped */
+
 .carousel-item img {
-  width: 100%;  /* Ensure the image fills the container horizontally */
-  height: auto;  /* Maintain aspect ratio */
-  object-fit: contain;  /* Ensure images maintain their aspect ratio and are fully visible */
+  width: 100%; 
+  height: auto;
+  object-fit: contain;
 }
 
-/* Mobile adjustments */
+
 @media (max-width: 768px) {
   #carouselExampleCaptions {
-    width: 90%;  /* Adjust the width for mobile */
-    height: 250px;  /* Smaller height for mobile devices */
+    width: 90%;
+    height: 250px;
   }
 }
   .carousel-item img {
-    width: 100%;  /* Ensure the image fills the container on mobile */
-    height: auto;  /* Maintain aspect ratio */
-    object-fit: contain;  /* Keep image within container */
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 .ca.card.text-bg-danger {
-    background-color: #7A0000 !important;  /* Dark red background for the entire card */
-    border: #2e0000;; /* Remove any default border */
-    overflow: hidden; /* Ensure the card content fits without overflow */
+    background-color: #7A0000 !important;
+    border: #2e0000;
+    overflow: hidden;
 }
 
 .card.text-bg-danger {
-    background-color: #7A0000 !important;  /* Dark red background for the entire card */
-      border: 2px solid #4e0000;  /* Darker red border around the card */
+    background-color: #7A0000 !important;
+    border: 2px solid #4e0000;
     margin: 10px;
-    overflow: hidden; /* Ensure the card content fits without overflow */
+    overflow: hidden;
 }
 .card-title {
     color: #ffcc00;
 }
 
-/* Ensure the card body has the same dark red background */
 .card-body {
-    background-color: #7A0000 !important;  /* Dark red background for the card body */
-    color: #fff;  /* White text for contrast */
-    padding: 15px; /* Adjust padding as needed */
+    border-top: 2px solid #5a0000;
+    background-color: #7A0000 !important;
+    color: #e5e5e5;
+    padding: 15px;
 }
 
-/* Ensure the image container has no extra background or space */
 .card-img-top {
-    background-color: transparent; /* No background color */
-    width: 100%; /* Ensure the image takes full width of the container */
-    object-fit: cover; /* Make sure the image fits properly */
+    background-color: transparent;
+    width: 100%;
+    object-fit: cover;
 }
 
-/* Button Styling (Make buttons black) */
 .card .btn-primary {
-    background-color: rgb(10, 10, 10);  /* Black button color */
-    border-color: #333;      /* Dark gray border */
+    background-color: rgb(10, 10, 10);
+    border-color: #333;
 }
 
 .card .btn-primary:hover {
-    background-color: #333;  /* Dark gray on hover */
-    border-color: #000;      /* Black border on hover */
+    background-color: #333;
+    border-color: #000;
 }
 
-/* Optional: Add some extra padding between the cards if needed */
 .card.mb-3 {
     margin-bottom: 20px;
 }
 
-/* Hover effect for the card */
 .card:hover {
-    background-color: #6e0000;  /* Slightly darker red when hovering over the card */
+    background-color: #bd1c1c;
 }
 .row {
     display: flex;
-    justify-content: center;  /* Distribute the cards evenly in a row */
-    flex-wrap: wrap;                 /* Allow wrapping in case there are more cards */
-    gap: 15px;                       /* Add space between the cards */
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 .card {
-    flex: 1 1 calc(33.33% - 15px);   /* Each card takes up 1/3 of the row with some margin */
-    margin-bottom: 20px;             /* Ensure there's spacing between the cards vertically */
+    flex: 1 1 calc(33.33% - 15px);
+    margin-bottom: 20px;
 }

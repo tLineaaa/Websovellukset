@@ -18,6 +18,11 @@ body {
 
 h3 {
     color:#e60000;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+h5 {
+    color: #ffcc00;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 .container {
     padding-left: 20px;
@@ -85,8 +90,8 @@ header {
 }
 
 .navbar-toggler-icon {
-        width: 60px; /* Increase the size of the icon */
-        height: 60px;
+        width: 55px;
+        height: 55px;
 }
 
 main {
@@ -117,18 +122,32 @@ footer {
 
 
 @media (max-width: 768px) {
-    .navbar-nav {
-        text-align: center;
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
     }
+
+    .navbar-brand {
+        font-size: 30px;
+        text-align: center;
+        flex-grow: 1;
+    }
+
+    .navbar-nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding: 0;
+    }
+
     .navbar-nav .nav-link {
         padding: 8px 15px;
         font-size: 16px;
     }
-    .navbar-brand {
-        font-size: 30px;
-    }
 }
-
 #carouselExampleCaptions {
   width: 70%;
   max-width: 1000px;
@@ -157,6 +176,14 @@ footer {
     height: auto;
     object-fit: contain;
   }
+
+  .cards-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap:wrap
+}
+
 .ca.card.text-bg-danger {
     background-color: #7A0000 !important;
     border: #2e0000;
@@ -187,6 +214,8 @@ footer {
     padding-top: 10px;
     padding-left: 5px;
     padding-right: 5px;
+    max-height: 400px;
+
 }
 
 .card .btn-primary {
@@ -206,13 +235,20 @@ footer {
 .card:hover {
     background-color: #bd1c1c;
 }
+
+.card {
+    margin-bottom: 20px;
+    max-width: 25rem;
+}
 .row {
-    display: flex;
-    justify-content: center;
+    display:flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 15px;
 }
-.card {
-    flex: 1 1 calc(33.33% - 15px);
-    margin-bottom: 20px;
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
